@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "networks": {
+    "wordy": {
+      "url": "https://proxy.berkeley.minaexplorer.com/graphql",
+      "keyPath": "keys/wordy.json",
+      "fee": "0.1",
+      "smartContract": "WordyContract"
+    },
+    "admin": {
+      "url": "https://proxy.berkeley.minaexplorer.com/graphql",
+      "keyPath": "keys/admin.json",
+      "fee": "0.1",
+      "smartContract": "WordyContract"
+    }
+  }
+}
