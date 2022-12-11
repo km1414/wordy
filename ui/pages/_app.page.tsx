@@ -269,8 +269,13 @@ export default function App() {
           game - to guess the hidden word. Each answer submission costs 1.1 MINA
           (+ transaction fee) and increases the bank by 1 MINA. The winner takes
           the bank. Note: currently real token transactions are disabled, but
-          will be live soon. Good luck!
+          will be live soon.
         </div>
+        <br/>
+        <br/>
+        <div>Hidden words contains 5 letters, first and last are known.
+          To submit your answer, type the full word in the field below,
+          hit <b>Guess</b> and sign the transaction with AURO. Good luck! </div>
         <div>
           {" "}
           <Board
