@@ -74,7 +74,7 @@ export class WordyContract extends SmartContract {
     );
     this.bank.set(bankUpdated);
 
-    // if solved - send tokens to user
+    // if not solved - send tokens to contract
     const receiveAmount = Circuit.if(
       isSolvedNew,
       (() => Field(0))(),
@@ -84,7 +84,7 @@ export class WordyContract extends SmartContract {
     payerUpdate.send({ to: this.address, amount: UInt64.from(receiveAmount) });
     payerUpdate.requireSignature();
 
-    // if not solved - send tokens to contract
+    // if solved - send tokens to user
     const sendAmount = Circuit.if(
       isSolvedNew,
       (() => bank.mul(1000000000))(),
