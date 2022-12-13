@@ -242,9 +242,9 @@ export default function App() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      const changedTitle = Math.random() > 0.5 ? "wordy" : "w***y";
+      const changedTitle = Math.random() > 0.1 ? "wordy" : "w***y";
       setTitle(changedTitle);
-    }, 50);
+    }, 10);
 
     return () => clearInterval(interval);
   }, [state]);
@@ -271,11 +271,13 @@ export default function App() {
           the bank. Note: currently real token transactions are disabled, but
           will be live soon.
         </div>
-        <br/>
-        <br/>
-        <div>Hidden words contains 5 letters, first and last are known.
-          To submit your answer, type the full word in the field below,
-          hit <b>Guess</b> and sign the transaction with AURO. Good luck! </div>
+        <br />
+        <br />
+        <div>
+          Hidden word contain 5 letters, first and last of them are known. To
+          submit your answer, type the full word in the field below, hit{" "}
+          <b>Guess</b> and sign the transaction with AURO. Good luck!{" "}
+        </div>
         <div>
           {" "}
           <Board
@@ -300,6 +302,27 @@ export default function App() {
         <br />
         <div> Is solved: {state.isSolved!.toString()} </div>
         <div> Bank size: {state.bank!} MINA</div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <a
+          href="https://berkeley.minaexplorer.com/wallet/B62qqpHSVWDMdkytcZA5pq7dM39sBV5wmZboKTEPB7pYPGQvptiXAfv"
+          target="_blank"
+          rel="noreferrer"
+        >
+          {" "}
+          [Explorer]{" "}
+        </a>
+        <a
+          href="https://github.com/km1414/wordy"
+          target="_blank"
+          rel="noreferrer"
+        >
+          {" "}
+          [Github]{" "}
+        </a>
       </div>
     );
   }

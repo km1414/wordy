@@ -1,16 +1,9 @@
-import {
-  Mina,
-  isReady,
-  PublicKey,
-  fetchAccount,
-  CircuitString,
-} from "snarkyjs";
+import {CircuitString, fetchAccount, isReady, Mina, PublicKey,} from "snarkyjs";
+import {WordyContract} from "../../contracts/src/Wordy";
 
 type Transaction = Awaited<ReturnType<typeof Mina.transaction>>;
 
 // ---------------------------------------------------------------------------------------
-
-import { WordyContract } from "../../contracts/src/Wordy";
 
 const state = {
   WordyContract: null as null | typeof WordyContract,
@@ -64,12 +57,11 @@ const functions = {
     return lastChar.toString();
   },
   createGuessTransaction: async (args: { word: string; user: PublicKey }) => {
-    const transaction = await Mina.transaction(() => {
+    state.transaction = await Mina.transaction(() => {
       state.zkapp!.guessWithoutTokenTransactions(
-        CircuitString.fromString(args.word)
+          CircuitString.fromString(args.word)
       );
     });
-    state.transaction = transaction;
   },
   proveGuessTransaction: async (args: {}) => {
     await state.transaction!.prove();
