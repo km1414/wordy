@@ -12,6 +12,6 @@ TODO:
 
 [Deployed zaApp](https://km1414.github.io/wordy/)
 
-[Address on chain](https://berkeley.minaexplorer.com/wallet/B62qqpHSVWDMdkytcZA5pq7dM39sBV5wmZboKTEPB7pYPGQvptiXAfv)
+[Address on chain](https://berkeley.minaexplorer.com/wallet/B62qpC1fcMoaTxR9NG2hcej2LtabVPcXYVA54mzfrxikUWh8mKj5ftw)
 
 [AURO Wallet](https://www.aurowallet.com/)

@@ -63,7 +63,7 @@ export default function App() {
         console.log("zkApp compiled");
 
         const zkappPublicKey = PublicKey.fromBase58(
-          "B62qqpHSVWDMdkytcZA5pq7dM39sBV5wmZboKTEPB7pYPGQvptiXAfv"
+          "B62qpC1fcMoaTxR9NG2hcej2LtabVPcXYVA54mzfrxikUWh8mKj5ftw"
         );
 
         await zkappWorkerClient.initZkappInstance(zkappPublicKey);
@@ -308,7 +308,7 @@ export default function App() {
         <br />
         <br />
         <a
-          href="https://berkeley.minaexplorer.com/wallet/B62qqpHSVWDMdkytcZA5pq7dM39sBV5wmZboKTEPB7pYPGQvptiXAfv"
+          href="https://berkeley.minaexplorer.com/wallet/B62qpC1fcMoaTxR9NG2hcej2LtabVPcXYVA54mzfrxikUWh8mKj5ftw"
           target="_blank"
           rel="noreferrer"
         >
